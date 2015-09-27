@@ -1,0 +1,25 @@
+{
+  "name": "json2xl",
+  "version": "1.0.0",
+  "description": "Exports JSON data to Excel along with Styles, Formatting and Formulas",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "Json2xl",
+    "Json",
+    "to",
+    "Excel",
+    "Export",
+    "Json",
+    "to",
+    "Excel",
+    "with",
+    "styles",
+    "Excel",
+    "Export"
+  ],
+  "author": "Mithun <hansiemithun@gmail.com> (https://github.com/hansiemithun)",
+  "license": "ISC"
+}
