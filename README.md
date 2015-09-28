@@ -1,4 +1,4 @@
-## [[Json2xl]()](https://github.com/hansiemithun/json2xl "Json2XL")
+## [Json2xl](https://github.com/hansiemithun/json2xl#json2xl "Json2xl")
 Exports JSON data to Excel along with Styles, Formatting and Formulas
  
 ### [Usage]()
