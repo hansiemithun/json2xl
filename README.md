@@ -131,6 +131,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  "fontSize" should be in pixels : 11px
  
  ### [Default CSS Styles](https://github.com/hansiemithun/json2xl#default-css-styles)
+ 
      1. Pattern: "Solid"
      2. Color: "#000" or "Black"
      3. BackgroundColor: "#FFF" or "White"
