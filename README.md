@@ -1,7 +1,7 @@
-# json2xl
+## [Json2xl]()
 Exports JSON data to Excel along with Styles, Formatting and Formulas
  
-## Usage
+### [Usage]()
  
     var json2xl = require("json2xl");
     
@@ -105,13 +105,38 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
                 res.end(response);
              });
  
-### Datatypes: (Optional) 
-1. String // Default
-2. Number
-3. Formula
-4. Link
-5. Date
+### [Datatypes: (Optional)]()
+  1. String 
+  2. Number
+  3. Formula
+  4. Link
+  5. Date
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
+
+### [CSS Styles]()
+  1. color
+  2. fontSize
+  3. backgroundColor
+  
+ "color" & "backgroundColor" can be either in hexadecimal or color names : #F00 or Red
+ "fontSize" should be in pixels : 11px
+ 
+ ### [Default CSS Styles]()
+ 1. Pattern: "Solid"
+ 2. Color: "#000" or "Black"
+ 3. BackgroundColor: "#FFF" or "White"
+ 4. FontSize: 10px
+ 5. FontFamily: "Arial"
+ 6. FontWeight: "Normal"
+ 7. BorderColor: "black"
+
+
+ 
+  
+  
+  
+
+
 
 
