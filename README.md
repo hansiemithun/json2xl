@@ -1,13 +1,21 @@
 ## [Json2xl](https://github.com/hansiemithun/json2xl#json2xl "Json2xl")
 Exports JSON data to Excel along with Styles, Formatting and Formulas
+
+This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
  
+## Installation
+    npm install json2xl
+
+## Sample
+A sample.js script is provided in the code. Running this will output a sample excel workbook named Excel.xlsx
+
 ### [Usage](https://github.com/hansiemithun/json2xl#usage)
  
     var json2xl = require("json2xl");
     
     app.get("/excelexport", function (req, res) {
       var filepath = "uploads/"
-      var fileName = Date.now() + '.xlsx';
+      var fileName = "Excel.xlsx"
       
       var wbOpts = {
             jszip:{
