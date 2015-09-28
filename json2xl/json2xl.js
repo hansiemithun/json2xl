@@ -11,8 +11,8 @@ var ExportToExcelWithStyles = function(data, callback){
        this.Rows = rows || [['Col1','Col2',"Col3"]];
        this.TotalRows = rows.length;
        this.Config = data.config;       
-       this.dataType = "string";
-       this.pattern = "solid";
+       this.DataType = "string";
+       this.Pattern = "solid";
        this.Color = "white";
        this.BackgroundColor = "#CCCCCC";
        this.FontSize = "10px";
@@ -21,7 +21,7 @@ var ExportToExcelWithStyles = function(data, callback){
        this.Wb = null; // WorkBook
        this.Ws = null; // Worksheet
        this.WbStyle = null; // WorkBook Style wb.Style();
-       this.BorderColor = 'green';       
+       this.BorderColor = "black";       
     }
 
     BuildExcel.prototype = {
@@ -51,7 +51,7 @@ var ExportToExcelWithStyles = function(data, callback){
         var borderStyle, borderType, borderColor, borderCoordinates, myStyle;
         var color = (typeof(cellStyle[0].color) === 'undefined') ? this.Color : cellStyle[0].color.toUpperCase();            
         var backgroundColor = (typeof(cellStyle[0].backgroundColor) === 'undefined') ? this.BackgroundColor : cellStyle[0].backgroundColor;
-        var pattern = (typeof(cellStyle[0].pattern) === 'undefined') ? this.pattern : cellStyle[0].pattern;
+        var pattern = (typeof(cellStyle[0].pattern) === 'undefined') ? this.Pattern : cellStyle[0].pattern;
         var fontSize = (typeof(cellStyle[0].fontSize) === 'undefined') ? parseInt(this.FontSize, 10) : parseInt(cellStyle[0].fontSize, 10);
         var fontFamily = (typeof(cellStyle[0].fontFamily) === 'undefined') ? this.FontFamily : cellStyle[0].fontFamily;
         var fontWeight = (typeof(cellStyle[0].fontWeight) === 'undefined') ? this.FontWeight : cellStyle[0].fontWeight;

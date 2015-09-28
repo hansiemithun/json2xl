@@ -5,7 +5,7 @@ var path 	= rekuire('path');
 var mime 	= rekuire('mime');
 var port 	= 8000; 
 var app 	= express();
-var Json2xl = rekuire('json2xl');
+var json2xl = rekuire('json2xl');
 
 app.use(express.static(__dirname + '/public'));
 
@@ -53,11 +53,9 @@ app.get('/excelexport', function (req, res) {
                 orientation: 'landscape',
           },
         }
-      
-      // var dataTypes = ['String', 'Number', 'Date'];
 
       var data = {
-              "worksheets" : ['Mithun'],                 
+              "worksheets" : ['Page-1'],                 
               "filepath": filepath,
               "filename": fileName,                  
               "rows": [
@@ -168,7 +166,7 @@ app.get('/excelexport', function (req, res) {
                 }
        };
 
-       Json2xl.ExportToExcelWithStyles(data, function(err, response){
+       json2xl.ExportToExcelWithStyles(data, function(err, response){
             res.end(response);
        });
 
