@@ -105,4 +105,13 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
                 res.end(response);
              });
  
-Prose
+### Datatypes: (Optional) 
+1. String // Default
+2. Number
+3. Formula
+4. Link
+5. Date
+
+All the datatypes are optional. If nothing is defined "String" dataType is considered
+
+
