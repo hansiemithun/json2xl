@@ -3,10 +3,10 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
 This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
  
-## Installation
+## [Installation](https://github.com/hansiemithun/json2xl#installation)
     npm install json2xl
 
-## Sample
+## [Sample](https://github.com/hansiemithun/json2xl#sample)
 A sample.js script is provided in the code. Running this will output a sample excel workbook named Excel.xlsx
 
 ### [Usage](https://github.com/hansiemithun/json2xl#usage)
