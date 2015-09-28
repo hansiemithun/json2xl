@@ -115,9 +115,9 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
 ### [CSS Styles](https://github.com/hansiemithun/json2xl#css-styles)
-  1. color
-  2. fontSize
-  3. backgroundColor
+1. Color
+2. BackgroundColor
+3. FontSize
   
  "color" & "backgroundColor" can be either in hexadecimal or color names : #F00 or Red
  "fontSize" should be in pixels : 11px
