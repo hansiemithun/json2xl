@@ -1,7 +1,7 @@
 ## [Json2xl](https://github.com/hansiemithun/json2xl#json2xl "Json2xl")
 Exports JSON data to Excel along with Styles, Formatting and Formulas
  
-### [Usage]()
+### [Usage](https://github.com/hansiemithun/json2xl#usage)
  
     var json2xl = require("json2xl");
     
