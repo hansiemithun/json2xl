@@ -3,13 +3,13 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
 This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
  
-## [Installation](https://github.com/hansiemithun/json2xl#installation)
+## [Installation](#installation)
     npm install json2xl
 
-## [Sample](https://github.com/hansiemithun/json2xl#sample)
+## [Sample](#sample)
 A sample.js script is provided in the code. Running this will output a sample excel workbook named Excel.xlsx
 
-### [Usage](https://github.com/hansiemithun/json2xl#usage)
+### [Usage](#usage)
  
     var json2xl = require("json2xl");
     
@@ -113,7 +113,7 @@ A sample.js script is provided in the code. Running this will output a sample ex
                 res.end(response);
              });
  
-### [Datatypes: (Optional)](https://github.com/hansiemithun/json2xl#datatypes-optional)
+### [Datatypes: (Optional)](#datatypes-optional)
     1. String 
     2. Number
     3. Formula
@@ -122,7 +122,7 @@ A sample.js script is provided in the code. Running this will output a sample ex
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
-### [CSS Styles](https://github.com/hansiemithun/json2xl#css-styles)
+### [CSS Styles](#css-styles)
     1. Color
     2. BackgroundColor
     3. FontSize
@@ -130,7 +130,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  "color" & "backgroundColor" can be either in hexadecimal or color names : #F00 or Red
  "fontSize" should be in pixels : 11px
  
- ### [Default CSS Styles](https://github.com/hansiemithun/json2xl#default-css-styles)
+ ### [Default CSS Styles](#default-css-styles)
  
      1. Pattern: "Solid"
      2. Color: "#000" or "Black"
