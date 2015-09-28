@@ -114,30 +114,30 @@ A sample.js script is provided in the code. Running this will output a sample ex
              });
  
 ### [Datatypes: (Optional)](https://github.com/hansiemithun/json2xl#datatypes-optional)
-  1. String 
-  2. Number
-  3. Formula
-  4. Link
-  5. Date
+    1. String 
+    2. Number
+    3. Formula
+    4. Link
+    5. Date
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
 ### [CSS Styles](https://github.com/hansiemithun/json2xl#css-styles)
-1. Color
-2. BackgroundColor
-3. FontSize
+    1. Color
+    2. BackgroundColor
+    3. FontSize
   
  "color" & "backgroundColor" can be either in hexadecimal or color names : #F00 or Red
  "fontSize" should be in pixels : 11px
  
  ### [Default CSS Styles](https://github.com/hansiemithun/json2xl#default-css-styles)
- 1. Pattern: "Solid"
- 2. Color: "#000" or "Black"
- 3. BackgroundColor: "#FFF" or "White"
- 4. FontSize: 10px
- 5. FontFamily: "Arial"
- 6. FontWeight: "Normal"
- 7. BorderColor: "black"
+     1. Pattern: "Solid"
+     2. Color: "#000" or "Black"
+     3. BackgroundColor: "#FFF" or "White"
+     4. FontSize: 10px
+     5. FontFamily: "Arial"
+     6. FontWeight: "Normal"
+     7. BorderColor: "black"
 
 
  
