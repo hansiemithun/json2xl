@@ -109,7 +109,7 @@ A sample.js script is provided in the code. Running this will output a sample ex
                     }
               };
              
-             Utility.ExportToExcelWithStyles(data, function(err, response){
+             json2xl.ExportToExcelWithStyles(data, function(err, response){
                 res.end(response);
              });
  
@@ -139,13 +139,3 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
      5. FontFamily: "Arial"
      6. FontWeight: "Normal"
      7. BorderColor: "black"
-
-
- 
-  
-  
-  
-
-
-
-
