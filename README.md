@@ -1,17 +1,20 @@
 # [Json2xl](https://github.com/hansiemithun/json2xl#json2xl "Json2xl")
 Exports JSON data to Excel along with Styles, Formatting and Formulas
 
-This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
+  	This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
  
 ### [Installation](#installation)
     npm install json2xl
 
 ### [Sample](#sample)
-A app.js script is provided in the code. Running this will output a sample excel workbook named Excel.xlsx
+	A app.js script is provided in the code. Running this will output a message as : "Successfully Excel file generated in path - uploads/1443512953422.xlsx" where the filename is Current Unix Timestamp which can be changed accordingly
 
 ### [Run Command](#run-command)
     node app.js
 
+### [Note](#note)
+	I am using [rekuire](https://www.npmjs.com/package/rekuire) npm package instead of [require](https://www.npmjs.com/package/require) just to not mess up with paths and its configuration. So dont get confuse
+    
 ### [Usage](#usage)
  
     global.rekuire = require("rekuire");
