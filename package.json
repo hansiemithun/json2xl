@@ -1,6 +1,6 @@
 {
   "name": "json2xl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Exports JSON data to Excel along with Styles, Formatting and Formulas",
   "main": "app.js",
   "scripts": {
