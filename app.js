@@ -1,11 +1,8 @@
 global.rekuire = require("rekuire");
 var express = rekuire("express");
-var fs 		= rekuire("fs");
-var path 	= rekuire('path');
-var mime 	= rekuire('mime');
-var port 	= 8000; 
 var app 	= express();
 var json2xl = rekuire('json2xl');
+var port    = 8000; 
 
 app.use(express.static(__dirname + '/public'));
 
