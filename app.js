@@ -16,7 +16,7 @@ app.listen(port, function(err, res){
     }
 });
 
-app.get('/excelexport', function (req, res) {
+app.get('/', function (req, res) {
       var filepath = "uploads/"
       var fileName = Date.now() + '.xlsx';
       
@@ -163,7 +163,7 @@ app.get('/excelexport', function (req, res) {
                 }
        };
 
-       json2xl.ExportToExcelWithStyles(data, function(err, response){
+       json2xl.Json2XL(data, function(err, response){
             res.end(response);
        });
 

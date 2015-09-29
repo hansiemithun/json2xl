@@ -1,6 +1,6 @@
 var xl = rekuire('excel4node');
 
-var ExportToExcelWithStyles = function(data, callback){
+var Json2XL = function(data, callback){
 
     function BuildExcel(data) {
       var rows = data.rows;
@@ -8,6 +8,7 @@ var ExportToExcelWithStyles = function(data, callback){
        this.WorkSheets = data.worksheets || 'Test';
        this.FilePath = data.filepath || './exceluploads/';
        this.FileName = data.filename || 'default_template_' + Date.now() + '.xlsx';
+       this.File = null;
        this.Rows = rows || [['Col1','Col2',"Col3"]];
        this.TotalRows = rows.length;
        this.Config = data.config;       
@@ -192,6 +193,7 @@ var ExportToExcelWithStyles = function(data, callback){
               if(rowsCreated){
                 var fileName = this.FileName;
                 var file = filePath + fileName;
+                this.File = file;
                 wb.write(file); // Create Excel File
                 return true;
               }
@@ -204,10 +206,10 @@ var ExportToExcelWithStyles = function(data, callback){
 
     var BuildExcel = new BuildExcel(data);    
     var response = BuildExcel.createExcelSheet();        
-        response = (response === true) ? "success" : "failure";
+        response = (response === true) ? "Successfully Excel file generated in path - " + data.filepath + data.filename  : "failure";
         callback(null, response);
 }; 
 
 module.exports = {
-  ExportToExcelWithStyles: ExportToExcelWithStyles
+  Json2XL: Json2XL
 }
