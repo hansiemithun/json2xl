@@ -73,16 +73,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
           var data = {
                   "worksheets" : ['Page-1'],                 
                   "filepath": filepath,
-                  "filename": fileName,                  
-                  "rows": [
-                        ['Serial','Age',"Name"],
-                        [1,27,"Test-1"],
-                        [2,27,"Test-2"],
-                        [3,27,"Test-3"],
-                        [4,27,"Test-4"],
-                        [5,27,"Test-5"],
-                        [6,27,"Test-6"]
-                    ],
+                  "filename": fileName,
                     "rows" : [
                                  [
                                     {   
