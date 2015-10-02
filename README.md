@@ -189,7 +189,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
-### [CSS Styles](#css-styles)
+### [CSS Styles: (Optional)](#css-styles)
     1. Color
     2. BackgroundColor
     3. FontSize
