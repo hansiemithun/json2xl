@@ -290,3 +290,9 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
                 res.end(response);
         });
     });
+    
+ ### Output
+ 		{
+         "status":"success",
+         "file":"./exceluploads/default_template_1443873516091.xlsx"
+         }
