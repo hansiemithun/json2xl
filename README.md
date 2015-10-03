@@ -188,7 +188,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
            	You can apply any excel formula to the value, this later gets converted to               the appropriate value.                       
     4. Link
     	Ex: "value" : ["https://www.google.co.in/", "Google"] ||                                               ["https://www.google.co.in/"]
-        	You can send link with title or just link
+        	You can send link with title as the second param or just link in the array
     5. Date
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
