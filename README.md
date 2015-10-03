@@ -3,16 +3,16 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
   	This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
  
-### [Installation](#installation)
+### [Installation](https://www.npmjs.com/package/json2xl#installation)
     npm install json2xl
 
-### [Sample](#sample)
+### [Sample](https://www.npmjs.com/package/json2xl#sample)
 	A app.js script is provided in the code. Running this will output a message as : "Successfully Excel file generated in path - uploads/1443512953422.xlsx" where the filename is Current Unix Timestamp which can be changed accordingly
 
 ### [Run Command](https://www.npmjs.com/package/json2xl#run-command)
     node app.js
 
-### [Note](#note)
+### [Note](https://www.npmjs.com/package/json2xl#note)
 	I am using [rekuire](https://www.npmjs.com/package/rekuire) npm package instead of [require](https://www.npmjs.com/package/require) just to not mess up with paths and its configuration. So dont get confuse
     
 ### [Usage](https://www.npmjs.com/package/json2xl#usage)
@@ -259,7 +259,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
   Worksheet settings such as print, outlines and margins, etc. 
   You can refer the excel4node doc for more information.
   
-  ### [Freezepanes (Optional)](#Freezepanes_(Optional))  
+  ### [Freezepanes (Optional)](https://www.npmjs.com/package/json2xl#Freezepanes-(Optional))  
   		"freezePanes" : {
             "rows" : [1], // Array of rows
             "cols" : [3] // Array of columns
@@ -267,7 +267,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
    	
  The above code freezes row:1 and column: 3
  
-### [Data Configurations (Optional)](#Data_Configurations_(Optional))
+### [Data Configurations (Optional)](https://www.npmjs.com/package/json2xl#Data-Configurations-(Optional))
  	"worksheets" : ['Test'],  
     "filepath": "/exceluploads/", 
     "filename": 'default_template_' + Date.now() + '.xlsx';
@@ -281,7 +281,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
 
 **Rows: ** By default it creates single row with 3 column values
 
-### [Minimal Configuration](#Minimal_Configuration)
+### [Minimal Configuration](https://www.npmjs.com/package/json2xl#Minimal-Configuration)
 
 	app.get('/json2xlmin', function (req, res) {
     	var data = {};
