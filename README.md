@@ -224,7 +224,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          }
        }
   
-  ### Workbook Settings (Optional)     
+  ### [Workbook Settings (Optional)](#workbook_settings_(Optional))     
       	 var wbOpts = {
             jszip:{
                 compression:'DEFLATE'
@@ -232,7 +232,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          };
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
   
-  ### Worksheet Settings (Optional)       
+  ### [Worksheet Settings (Optional)](#Worksheet_Settings_(Optional))
        		var wsOpts = {
               margins:{
                   left : .75,
@@ -261,7 +261,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
   Worksheet settings such as print, outlines and margins, etc. 
   You can refer the excel4node doc for more information.
   
-  ### Freezepanes (Optional)  
+  ### [Freezepanes (Optional)](#Freezepanes_(Optional))  
   		"freezePanes" : {
             "rows" : [1], // Array of rows
             "cols" : [3] // Array of columns
@@ -269,7 +269,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
    	
  The above code freezes row:1 and column: 3
  
-### Data Configurations (Optional)
+### [Data Configurations (Optional)](#Data_Configurations_(Optional))
  	"worksheets" : ['Test'],  
     "filepath": "/exceluploads/", 
     "filename": 'default_template_' + Date.now() + '.xlsx';
