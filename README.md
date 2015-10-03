@@ -184,9 +184,10 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
     1. String 
     2. Number
     3. Formula
-    	Ex. "value" : 'B2+C2'
+    	Ex: "value" : 'B2+C2'
            	You can apply any excel formula to the value, this later gets converted to               the appropriate value.                       
     4. Link
+    	Ex:
     5. Date
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
