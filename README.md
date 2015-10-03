@@ -274,5 +274,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
     "filepath": "/exceluploads/", 
     "filename": 'default_template_' + Date.now() + '.xlsx';
  
+**Worksheet: ** is an array of arguments, but at present it supports only 1 worksheet
+**Filepath: ** by default it gets stored in **/exceluploads/** directory which is 		  relative path to the project folder. Even if it doesnt exist. It creates, if it fails, please check with project folder permissions
  
         
