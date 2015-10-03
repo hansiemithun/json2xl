@@ -215,4 +215,21 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
             ii. border color
   
   [### Configurations](#configurations)
-     
+     "config" : { 
+         "wbOpts" : wbOpts, 
+         "wsOpts" : wsOpts, 
+         "freezePanes" : {
+         "rows" : [1],
+         "cols" : [3]
+         }
+       }
+      
+      i. wbOpts (Workbook options - Optional)
+      	 var wbOpts = {
+            jszip:{
+                compression:'DEFLATE'
+            }
+         };
+         This enables deflate compression mode for excel as provided by excel4node 	              package. 
+
+       
