@@ -258,6 +258,6 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
             }
           }
 		Worksheet settings such as print, outlines and margins, etc. 
-        You can refer the excel4node doc for more idea about this.
+        You can refer the excel4node doc for more information.
         
        
