@@ -209,7 +209,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
      4. FontSize: 10px 
      5. FontFamily: "Arial" 
      6. FontWeight: "Normal"
-     7. BorderColor: "black" 
+     7. Border: "none" 
         Ex: "border" : ["thick", "black"]
             i. thick or thin
             ii. border color
