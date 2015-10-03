@@ -9,7 +9,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 ### [Sample](#sample)
 	A app.js script is provided in the code. Running this will output a message as : "Successfully Excel file generated in path - uploads/1443512953422.xlsx" where the filename is Current Unix Timestamp which can be changed accordingly
 
-### [Run Command](#run-command)
+### [Run Command](https://www.npmjs.com/package/json2xl#run-command)
     node app.js
 
 ### [Note](#note)
@@ -178,7 +178,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
            });    
     });
  
-### [Datatypes: (Optional)](#datatypes-optional)
+### [Datatypes: (Optional)](https://www.npmjs.com/package/json2xl#datatypes-optional)
    ** 1. String **
    ** 2. Number **
    ** 3. Formula **
@@ -191,7 +191,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
-### [CSS Styles: (Optional)](#css-styles)
+### [CSS Styles: (Optional)](https://www.npmjs.com/package/json2xl#css-styles)
     1. Color
     2. BackgroundColor
     3. FontSize
@@ -199,7 +199,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  "color" & "backgroundColor" can be either in hexadecimal or color names : #F00 or Red
  "fontSize" should be in pixels : 11px
  
- ### [Default CSS Styles](#default-css-styles)
+ ### [Default CSS Styles](https://www.npmjs.com/package/json2xl#default-css-styles)
  
      1. Pattern: "Solid"
      2. Color: "#000" or "Black"
@@ -212,7 +212,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
             i. thick or thin // Thin is preferred
             ii. border color
   
-  [### Configurations](#configurations)
+  [### Configurations](https://www.npmjs.com/package/json2xl#configurations)
      "config" : { 
          "wbOpts" : wbOpts, 
          "wsOpts" : wsOpts, 
@@ -222,7 +222,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          }
        }
   
-  ### [Workbook Settings (Optional)](#workbook_settings_(Optional))     
+  ### [Workbook Settings (Optional)](https://www.npmjs.com/package/json2xl#workbook-settings-(Optional))     
       	 var wbOpts = {
             jszip:{
                 compression:'DEFLATE'
