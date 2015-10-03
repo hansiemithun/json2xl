@@ -175,10 +175,8 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
     
            json2xl.Json2XL(data, function(err, response){
                 res.end(response);
-           });
-    
+           });    
     });
-
  
 ### [Datatypes: (Optional)](#datatypes-optional)
    ** 1. String **
@@ -282,4 +280,13 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
 **Filename: ** By default it creates file with 'default_template_'+Date.now()+'.xlsx' 
 
 **Rows: ** By default it creates single row with 3 column values
+
+### [Minimal Configuration](#Minimal_Configuration)
+
+	app.get('/', function (req, res) {
+    	var data = {};
         
+    	json2xl.Json2XL(data, function(err, response){
+                res.end(response);
+        });
+    });
