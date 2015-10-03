@@ -273,7 +273,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  	"worksheets" : ['Test'],  
     "filepath": "/exceluploads/", 
     "filename": 'default_template_' + Date.now() + '.xlsx';
-    "rows": 
+    "rows": [['Row1_Col1','Row1_Col2',"Row1_Col3"]]    
  
 **Worksheet: ** Is an array of arguments, but at present it supports only 1 worksheet
 
@@ -281,5 +281,5 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
 
 **Filename: ** By default it creates file with 'default_template_'+Date.now()+'.xlsx' 
 
- 
+**Rows: ** 
         
