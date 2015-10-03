@@ -1,16 +1,17 @@
 var xl = rekuire('excel4node');
 
-var ExportToExcelWithStyles = function(data, callback){
+var Json2XL = function(data, callback){
 
     function BuildExcel(data) {
-      var rows = data.rows;
+      var rows = data.rows || [['Row1_Col1','Row1_Col2',"Row1_Col3"]];
+      var config = data.config || null;
 
-       this.WorkSheets = data.worksheets || 'Test';
+       this.WorkSheets = data.worksheets || ['Test'];
        this.FilePath = data.filepath || './exceluploads/';
        this.FileName = data.filename || 'default_template_' + Date.now() + '.xlsx';
-       this.Rows = rows || [['Row1_Col1','Row1_Col2',"Row1_Col3"]];
+       this.Rows = rows;
        this.TotalRows = rows.length;
-       this.Config = data.config;       
+       this.Config = config;
        this.DataType = "string";
        this.Pattern = "solid";
        this.Color = "white";
@@ -18,38 +19,56 @@ var ExportToExcelWithStyles = function(data, callback){
        this.FontSize = "10px";
        this.FontFamily = "arial";
        this.FontWeight = "normal";
+       this.File = null;
        this.Wb = null; // WorkBook
        this.Ws = null; // Worksheet
        this.WbStyle = null; // WorkBook Style wb.Style();
-       this.BorderColor = "black";       
+       this.BorderColor = "black";
     }
 
     BuildExcel.prototype = {
-      getWorkBook: function(){       
-        var wbOpts = (typeof(this.Config.WbOpts) === 'undefined') ? null : this.Config.WbOpts;   
-        var wb = (wbOpts!==null) ? new xl.WorkBook(wbOpts) : new xl.WorkBook();        
-            this.Wb = wb;
-            this.WbStyle = wb.Style();
-            return wb;
+      getWorkBook: function(){
+      	flag = true;
+      	var wb;
+
+      	if (this.Config === null) {
+      		flag = false;
+      	}
+      	else if(typeof(this.Config.WbOpts)==='undefined'){
+      		flag = false;
+      	}
+
+      	wb = (flag===true) ? new xl.WorkBook(this.Config.WbOpts) : new xl.WorkBook();
+      	this.Wb = wb;
+  		this.WbStyle = wb.Style();
+        return wb;
       },
       getWorkSheet: function(){
-        var wb = this.Wb;
-        var sheetName = this.WorkSheets[0];
-        var wsOpts = (typeof(this.Config.WsOpts) === 'undefined') ? null : this.Config.WsOpts;        
-        var ws = (wsOpts!==null) ? wb.WorkSheet(sheetName, wsOpts) : wb.WorkSheet(sheetName);        
-        this.Ws = ws;
-        return;
+        	flag = true;
+      	var wb = this.Wb;
+      	var sheetName = this.WorkSheets[0];
+
+      	if (this.Config === null) {
+      		flag = false;
+      	}
+      	else if(typeof(this.Config.WsOpts)==='undefined'){
+      		flag = false;
+      	}
+
+      	ws = (flag===true) ? wb.WorkSheet(sheetName, wsOpts) : wb.WorkSheet(sheetName); 
+      	this.Ws = ws;
+        return wb;
       },
       createDirectory: function(dir){        
          if(!fs.existsSync(dir)){
-              fs.mkdirSync(dir);              
-          }          
+              fs.mkdirSync(dir);
+          }
           return true;
       },
       createCellStyles: function(cell,cellStyle){
         var styleArr = [];
         var borderStyle, borderType, borderColor, borderCoordinates, myStyle;
-        var color = (typeof(cellStyle[0].color) === 'undefined') ? this.Color : cellStyle[0].color.toUpperCase();            
+        var color = (typeof(cellStyle[0].color) === 'undefined') ? this.Color : cellStyle[0].color.toUpperCase();
         var backgroundColor = (typeof(cellStyle[0].backgroundColor) === 'undefined') ? this.BackgroundColor : cellStyle[0].backgroundColor;
         var pattern = (typeof(cellStyle[0].pattern) === 'undefined') ? this.Pattern : cellStyle[0].pattern;
         var fontSize = (typeof(cellStyle[0].fontSize) === 'undefined') ? parseInt(this.FontSize, 10) : parseInt(cellStyle[0].fontSize, 10);
@@ -124,15 +143,21 @@ var ExportToExcelWithStyles = function(data, callback){
         var row, cell, colsLen, i, j, cellValue, cellType, cellStyle, l;
         var ws = this.Ws;
         var totRows = this.TotalRows;
-        var k = 1;        
-        var freezePanes = (typeof(this.Config.freezePanes) === 'undefined') ? null : this.Config.freezePanes;
+        var k = 1;
+        	flag = true;
+
+        if(this.Config===null || typeof(this.Config.freezePanes)=='undefined'){
+        	flag = false;
+        }
+        
+        var freezePanes = (flag===false) ?  null : this.Config.freezePanes;
 
         for(i=0; i<totRows; i++){            
             row = rows[i];
             colsLen = row.length;
             
-            for(j=0; j<colsLen; j++){                
-                cellValue = row[j].value;
+            for(j=0; j<colsLen; j++){            	
+                cellValue = (typeof row[j].value === 'undefined') ? row[j] : row[j].value;
                 cellType = (typeof row[j].dataType === 'undefined') ? 'STRING' : row[j].dataType.toUpperCase();
                 cellStyle = (typeof row[j].style === 'undefined') ? null : row[j].style;
 
@@ -188,26 +213,30 @@ var ExportToExcelWithStyles = function(data, callback){
 
               var rows = this.Rows;
               var rowsCreated = this.createRows(rows);
+              var response = {};
 
               if(rowsCreated){
                 var fileName = this.FileName;
                 var file = filePath + fileName;
-                wb.write(file); // Create Excel File
-                return true;
+                this.File = file;
+                wb.write(file); // Create Excel File                
+                response.status = "success";
               }
               else{
-                return false;
+              	response.status = "error";                
               }
+
+              response.file = this.FilePath + this.FileName;
+              return response;
           }          
       }
     };
 
     var BuildExcel = new BuildExcel(data);    
-    var response = BuildExcel.createExcelSheet();        
-        response = (response === true) ? "success" : "failure";
-        callback(null, response);
+    var response = BuildExcel.createExcelSheet();    
+    callback(null, response);
 }; 
 
 module.exports = {
-  ExportToExcelWithStyles: ExportToExcelWithStyles
+  Json2XL: Json2XL
 }

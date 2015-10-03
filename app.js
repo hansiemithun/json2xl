@@ -1,11 +1,8 @@
 global.rekuire = require("rekuire");
 var express = rekuire("express");
-var fs 		= rekuire("fs");
-var path 	= rekuire('path');
-var mime 	= rekuire('mime');
-var port 	= 8000; 
 var app 	= express();
 var json2xl = rekuire('json2xl');
+var port    = 8000; 
 
 app.use(express.static(__dirname + '/public'));
 
@@ -19,7 +16,7 @@ app.listen(port, function(err, res){
     }
 });
 
-app.get('/excelexport', function (req, res) {
+app.get('/json2xl', function (req, res) {
       var filepath = "uploads/"
       var fileName = Date.now() + '.xlsx';
       
@@ -58,16 +55,7 @@ app.get('/excelexport', function (req, res) {
               "worksheets" : ['Page-1'],                 
               "filepath": filepath,
               "filename": fileName,                  
-              "rows": [
-                    ['Serial','Age',"Name"],
-                    [1,27,"Test-1"],
-                    [2,27,"Test-2"],
-                    [3,27,"Test-3"],
-                    [4,27,"Test-4"],
-                    [5,27,"Test-5"],
-                    [6,27,"Test-6"]
-                ],
-                "rows" : [
+              "rows" : [
                              [
                                 {   
                                     "value" : "Row-1-Col-1",
@@ -164,11 +152,14 @@ app.get('/excelexport', function (req, res) {
                         "cols" : [3]
                     }
                 }
-       };
-
-       json2xl.ExportToExcelWithStyles(data, function(err, response){
-            res.end(response);
-       });
-
+       };       
 });
 
+
+        app.get('/json2xlmin', function (req, res) {
+            var data = {};
+            
+            json2xl.Json2XL(data, function(err, response){
+                    res.json(response);
+            });
+        });
