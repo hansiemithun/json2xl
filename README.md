@@ -182,7 +182,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
  
 ### [Datatypes: (Optional)](#datatypes-optional)
     1. String 
-    2. Number
+    2. Number 
     3. Formula
     	Ex: "value" : 'B2+C2' // String
            	You can apply any excel formula to the value, this later gets converted to               the appropriate value.                       
@@ -210,3 +210,6 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
      5. FontFamily: "Arial"
      6. FontWeight: "Normal"
      7. BorderColor: "black"
+     	i. 
+     
+     
