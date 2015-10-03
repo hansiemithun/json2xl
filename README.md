@@ -15,7 +15,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 ### [Note](#note)
 	I am using [rekuire](https://www.npmjs.com/package/rekuire) npm package instead of [require](https://www.npmjs.com/package/require) just to not mess up with paths and its configuration. So dont get confuse
     
-### [Usage](#usage)
+### [Usage](https://www.npmjs.com/package/json2xl#usage)
  
     global.rekuire = require("rekuire");
     var express = rekuire("express");
