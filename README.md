@@ -270,8 +270,8 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  The above code freezes row:1 and column: 3
  
 ### Data Configurations (Optional)
- 	"worksheets" : ['Page-1'],  // Array of worksheets               
-    "filepath": "uploads/", 
-    "filename": fileName,  
+ 	"worksheets" : ['Page-1'],  
+    "filepath": "/exceluploads/", 
+    "filename": 'default_template_' + Date.now() + '.xlsx';
  
         
