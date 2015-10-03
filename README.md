@@ -281,5 +281,5 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
 
 **Filename: ** By default it creates file with 'default_template_'+Date.now()+'.xlsx' 
 
-**Rows: ** 
+**Rows: ** By default it creates single row with 3 column values
         
