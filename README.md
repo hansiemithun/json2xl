@@ -233,6 +233,30 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
        
        ii. wsOpts (Worksheet options)
-       	
-
+       		var wsOpts = {
+              margins:{
+                  left : .75,
+                  right : .75,
+                  top : 1.0,
+                  bottom : 1.0,
+                  footer : .5,
+                  header : .5
+              },
+              printOptions:{
+                  centerHorizontal : true,
+                  centerVertical : false
+              },
+              view:{
+                  zoom : 100
+              },
+              outline:{
+                  summaryBelow : true
+              },
+              fitToPage:{
+                  fitToHeight: 100,
+                  orientation: 'landscape',
+            }
+          }
+		Worksheet settings such as print, outlines and margins, etc. Plz refer the doc 	         of excel4node for more idea about this.
+        
        
