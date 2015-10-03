@@ -273,6 +273,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  	"worksheets" : ['Test'],  
     "filepath": "/exceluploads/", 
     "filename": 'default_template_' + Date.now() + '.xlsx';
+    "rows": 
  
 **Worksheet: ** Is an array of arguments, but at present it supports only 1 worksheet
 
