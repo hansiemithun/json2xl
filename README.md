@@ -35,7 +35,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
         }
     });
     
-    app.get('/', function (req, res) {
+    app.get('/json2xl', function (req, res) {
           var filepath = "uploads/"
           var fileName = Date.now() + '.xlsx';
           
@@ -283,7 +283,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
 
 ### [Minimal Configuration](#Minimal_Configuration)
 
-	app.get('/', function (req, res) {
+	app.get('/json2xlmin', function (req, res) {
     	var data = {};
         
     	json2xl.Json2XL(data, function(err, response){
