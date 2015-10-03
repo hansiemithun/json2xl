@@ -224,8 +224,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          }
        }
   
-  ### Workbook Settings (Optional)
-      i. wbOpts
+  ### Workbook Settings (Optional)     
       	 var wbOpts = {
             jszip:{
                 compression:'DEFLATE'
@@ -233,8 +232,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          };
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
   
-  ### Worksheet Settings (Optional)
-       ii. wsOpts (Worksheet options)
+  ### Worksheet Settings (Optional)       
        		var wsOpts = {
               margins:{
                   left : .75,
@@ -259,7 +257,8 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
                   orientation: 'landscape',
             }
           }
-		Worksheet settings such as print, outlines and margins, etc. 
-        You can refer the excel4node doc for more information.
+          
+  Worksheet settings such as print, outlines and margins, etc. 
+  You can refer the excel4node doc for more information.
         
        
