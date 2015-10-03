@@ -230,7 +230,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          };
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
   
-  ### [Worksheet Settings (Optional)](#Worksheet_Settings_(Optional))
+  ### [Worksheet Settings (Optional)](https://www.npmjs.com/package/json2xl#Worksheet-Settings-(Optional))
        		var wsOpts = {
               margins:{
                   left : .75,
