@@ -206,8 +206,8 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
      1. Pattern: "Solid"
      2. Color: "#000" or "Black"
      3. BackgroundColor: "#FFF" or "White"
-     4. FontSize: 10px
-     5. FontFamily: "Arial"
+     4. FontSize: 10px 
+     5. FontFamily: "Arial" 
      6. FontWeight: "Normal"
      7. BorderColor: "black"
         Ex: "border" : ["thick", "black"]
