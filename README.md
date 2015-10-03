@@ -231,5 +231,8 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
             }
          };
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
+       
+       ii. wsOpts (Worksheet options)
+       	
 
        
