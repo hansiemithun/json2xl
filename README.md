@@ -213,5 +213,6 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
         Ex: "border" : ["thin", "black"]
             i. thick or thin // Thin is preferred
             ii. border color
-         
+  
+  [### Configurations](#configurations)
      
