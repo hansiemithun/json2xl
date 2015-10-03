@@ -3,19 +3,19 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
   	This Library depends on [excel4node](https://www.npmjs.com/package/excel4node)
  
-### [Installation](#installation)
+### [Installation](https://www.npmjs.com/package/json2xl#installation)
     npm install json2xl
 
-### [Sample](#sample)
+### [Sample](https://www.npmjs.com/package/json2xl#sample)
 	A app.js script is provided in the code. Running this will output a message as : "Successfully Excel file generated in path - uploads/1443512953422.xlsx" where the filename is Current Unix Timestamp which can be changed accordingly
 
-### [Run Command](#run-command)
+### [Run Command](https://www.npmjs.com/package/json2xl#run-command)
     node app.js
 
-### [Note](#note)
+### [Note](https://www.npmjs.com/package/json2xl#note)
 	I am using [rekuire](https://www.npmjs.com/package/rekuire) npm package instead of [require](https://www.npmjs.com/package/require) just to not mess up with paths and its configuration. So dont get confuse
     
-### [Usage](#usage)
+### [Usage](https://www.npmjs.com/package/json2xl#usage)
  
     global.rekuire = require("rekuire");
     var express = rekuire("express");
@@ -35,7 +35,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
         }
     });
     
-    app.get('/', function (req, res) {
+    app.get('/json2xl', function (req, res) {
           var filepath = "uploads/"
           var fileName = Date.now() + '.xlsx';
           
@@ -175,12 +175,10 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
     
            json2xl.Json2XL(data, function(err, response){
                 res.end(response);
-           });
-    
+           });    
     });
-
  
-### [Datatypes: (Optional)](#datatypes-optional)
+### [Datatypes: (Optional)](https://www.npmjs.com/package/json2xl#datatypes-optional)
    ** 1. String **
    ** 2. Number **
    ** 3. Formula **
@@ -193,7 +191,7 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
-### [CSS Styles: (Optional)](#css-styles)
+### [CSS Styles: (Optional)](https://www.npmjs.com/package/json2xl#css-styles)
     1. Color
     2. BackgroundColor
     3. FontSize
@@ -201,7 +199,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
  "color" & "backgroundColor" can be either in hexadecimal or color names : #F00 or Red
  "fontSize" should be in pixels : 11px
  
- ### [Default CSS Styles](#default-css-styles)
+ ### [Default CSS Styles](https://www.npmjs.com/package/json2xl#default-css-styles)
  
      1. Pattern: "Solid"
      2. Color: "#000" or "Black"
@@ -214,7 +212,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
             i. thick or thin // Thin is preferred
             ii. border color
   
-  [### Configurations](#configurations)
+  [### Configurations](https://www.npmjs.com/package/json2xl#configurations)
      "config" : { 
          "wbOpts" : wbOpts, 
          "wsOpts" : wsOpts, 
@@ -224,7 +222,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          }
        }
   
-  ### [Workbook Settings (Optional)](#workbook_settings_(Optional))     
+  ### [Workbook Settings (Optional)](https://www.npmjs.com/package/json2xl#workbook-settings-(Optional))     
       	 var wbOpts = {
             jszip:{
                 compression:'DEFLATE'
@@ -232,7 +230,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          };
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
   
-  ### [Worksheet Settings (Optional)](#Worksheet_Settings_(Optional))
+  ### [Worksheet Settings (Optional)](https://www.npmjs.com/package/json2xl#Worksheet-Settings-(Optional))
        		var wsOpts = {
               margins:{
                   left : .75,
@@ -261,7 +259,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
   Worksheet settings such as print, outlines and margins, etc. 
   You can refer the excel4node doc for more information.
   
-  ### [Freezepanes (Optional)](#Freezepanes_(Optional))  
+  ### [Freezepanes (Optional)](https://www.npmjs.com/package/json2xl#Freezepanes-(Optional))  
   		"freezePanes" : {
             "rows" : [1], // Array of rows
             "cols" : [3] // Array of columns
@@ -269,7 +267,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
    	
  The above code freezes row:1 and column: 3
  
-### [Data Configurations (Optional)](#Data_Configurations_(Optional))
+### [Data Configurations (Optional)](https://www.npmjs.com/package/json2xl#Data-Configurations-(Optional))
  	"worksheets" : ['Test'],  
     "filepath": "/exceluploads/", 
     "filename": 'default_template_' + Date.now() + '.xlsx';
@@ -282,4 +280,19 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
 **Filename: ** By default it creates file with 'default_template_'+Date.now()+'.xlsx' 
 
 **Rows: ** By default it creates single row with 3 column values
+
+### [Minimal Configuration](https://www.npmjs.com/package/json2xl#Minimal-Configuration)
+
+	app.get('/json2xlmin', function (req, res) {
+    	var data = {};
         
+    	json2xl.Json2XL(data, function(err, response){
+                res.end(response);
+        });
+    });
+    
+ ### Output
+ 		{
+         "status":"success",
+         "file":"./exceluploads/default_template_1443873516091.xlsx"
+         }
