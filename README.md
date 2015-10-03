@@ -211,7 +211,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
      6. FontWeight: "Normal"
      7. Border: "none" 
         Ex: "border" : ["thick", "black"]
-            i. thick or thin
+            i. thick or thin // Thin is preferred
             ii. border color
          
      
