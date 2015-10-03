@@ -181,15 +181,15 @@ Exports JSON data to Excel along with Styles, Formatting and Formulas
 
  
 ### [Datatypes: (Optional)](#datatypes-optional)
-    1. String 
-    2. Number 
-    3. Formula
+   ** 1. String**
+   ** 2. Number **
+   ** 3. Formula**
     	Ex: "value" : 'B2+C2' // String
            	You can apply any excel formula to the value, this later gets converted to               the appropriate value.                       
-    4. Link
+   ** 4. Link**
     	Ex: "value" : ["https://www.google.co.in/", "Google"] ||                                               ["https://www.google.co.in/"] // Array
         	You can send link with title as the second param or just link in the array
-    5. Date
+   ** 5. Date**
 
 All the datatypes are optional. If nothing is defined "String" dataType is considered
 
@@ -223,15 +223,17 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
          "cols" : [3]
          }
        }
-      
-      i. wbOpts (Workbook options - Optional)
+  
+  ### Workbook Settings (Optional)
+      i. wbOpts
       	 var wbOpts = {
             jszip:{
                 compression:'DEFLATE'
             }
          };
          This enables deflate compression mode for excel as provided by excel4node 	              package. 
-       
+  
+  ### Worksheet Settings (Optional)
        ii. wsOpts (Worksheet options)
        		var wsOpts = {
               margins:{
