@@ -257,6 +257,7 @@ All the datatypes are optional. If nothing is defined "String" dataType is consi
                   orientation: 'landscape',
             }
           }
-		Worksheet settings such as print, outlines and margins, etc. Plz refer the doc 	         of excel4node for more idea about this.
+		Worksheet settings such as print, outlines and margins, etc. 
+        You can refer the excel4node doc for more idea about this.
         
        
